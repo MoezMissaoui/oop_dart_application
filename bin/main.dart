@@ -1,5 +1,7 @@
 import 'package:oop_dart_application/person_lib.dart';
 import 'package:oop_dart_application/employee_lib.dart';
+import 'package:mysql1/mysql1.dart';
+import 'package:oop_dart_application/database.dart' as db;
 
 class Moez extends Employee {
   Moez(String name, int age, double salary, String city, String country,
@@ -72,4 +74,7 @@ void main(List<String> arguments) {
   print(
       "${salahmissaoui.name} is Has Phone Number : ${salahmissaoui.isHasPhoneNumber} .");
   salahmissaoui.employeeDepartement();
+  print("\n");
+  print("***** DB Management *****");
+  db.listOfArticles();
 }
