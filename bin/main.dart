@@ -2,7 +2,12 @@ import 'package:oop_dart_application/Person.dart';
 import 'package:oop_dart_application/Employee.dart';
 
 class Moez extends Employee {
+  Moez(String name, int age, double salary, String city, String country,
+      String department)
+      : super.initialize(name, age, salary, city, country, department);
+
   void myAdress() => print("Moez class");
+
   @override
   void employeeDepartement() {
     // TODO: implement employeeDepartement
@@ -12,6 +17,10 @@ class Moez extends Employee {
 
 class Salah extends Employee {
   late bool isHasPhoneNumber;
+
+  Salah(String name, int age, double salary, String city, String country,
+      String department, this.isHasPhoneNumber)
+      : super(name, age, salary, city, country, department);
 
   @override
   void employeeDepartement() {
@@ -45,14 +54,8 @@ void main(List<String> arguments) {
   print("${salah.getName}, ${salah.getAge} years old.");
   print("\n");
 
-  var moezmissaoui = Moez();
-  moezmissaoui.name = "Moez Missaoui";
-  moezmissaoui.age = 34;
-  moezmissaoui.department = "Informatique";
-  moezmissaoui.city = "Aouina";
-  moezmissaoui.country = "Tunis";
-  moezmissaoui.salary = 100.25;
-
+  var moezmissaoui =
+      Moez("Moez Missaoui", 30, 100.25, "Aouina", "Tunis", "Informatique");
   print(moezmissaoui.name);
   print(moezmissaoui.age);
   print(moezmissaoui.department);
@@ -65,13 +68,8 @@ void main(List<String> arguments) {
 
   print("\n");
 
-  var salahmissaoui = Salah();
-  salahmissaoui.name = "Salah Missaoui";
-  salahmissaoui.age = 34;
-  salahmissaoui.department = "Mécanique";
-  salahmissaoui.city = "Paris";
-  salahmissaoui.country = "France";
-  salahmissaoui.salary = 450.25;
+  var salahmissaoui =
+      Salah("Salah Missaoui", 30, 450.25, "Paris", "France", "Mécanique", true);
   salahmissaoui.isHasPhoneNumber = true;
   print(
       "${salahmissaoui.name} is Has Phone Number : ${salahmissaoui.isHasPhoneNumber} .");
