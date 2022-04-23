@@ -3,10 +3,21 @@ import 'package:oop_dart_application/Employee.dart';
 
 class Moez extends Employee {
   void myAdress() => print("Moez class");
+  @override
+  void employeeDepartement() {
+    // TODO: implement employeeDepartement
+    print("$name Departement is HR.");
+  }
 }
 
 class Salah extends Employee {
   late bool isHasPhoneNumber;
+
+  @override
+  void employeeDepartement() {
+    // TODO: implement employeeDepartement
+    print("$name Departement is Store.");
+  }
 }
 
 void main(List<String> arguments) {
@@ -50,6 +61,7 @@ void main(List<String> arguments) {
   print(moezmissaoui.country);
   moezmissaoui.printInfo();
   moezmissaoui.myAdress();
+  moezmissaoui.employeeDepartement();
 
   print("\n");
 
@@ -63,4 +75,5 @@ void main(List<String> arguments) {
   salahmissaoui.isHasPhoneNumber = true;
   print(
       "${salahmissaoui.name} is Has Phone Number : ${salahmissaoui.isHasPhoneNumber} .");
+  salahmissaoui.employeeDepartement();
 }

@@ -5,4 +5,6 @@ class Employee {
 
   void printInfo() => print(
       "$name , $age years old. $department , $salary , $city , $country ");
+
+  void employeeDepartement() => print("Your Departement is IT.");
 }
