@@ -1,4 +1,4 @@
-import 'package:oop_dart_application/Person.dart';
+import 'package:oop_dart_application/person.dart';
 import 'package:test/test.dart';
 
 void main() {

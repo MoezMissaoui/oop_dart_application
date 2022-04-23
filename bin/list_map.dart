@@ -1,4 +1,4 @@
-import 'package:oop_dart_application/Person.dart';
+import 'package:oop_dart_application/person.dart';
 
 void main(List<String> args) {
   collectionList();

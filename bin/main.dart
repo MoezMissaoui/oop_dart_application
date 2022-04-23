@@ -1,5 +1,5 @@
-import 'package:oop_dart_application/Person.dart';
-import 'package:oop_dart_application/Employee.dart';
+import 'package:oop_dart_application/person.dart';
+import 'package:oop_dart_application/employee.dart';
 
 class Moez extends Employee {
   Moez(String name, int age, double salary, String city, String country,
