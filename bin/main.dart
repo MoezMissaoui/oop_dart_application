@@ -1,5 +1,5 @@
-import 'package:oop_dart_application/person.dart';
-import 'package:oop_dart_application/employee.dart';
+import 'package:oop_dart_application/person_lib.dart';
+import 'package:oop_dart_application/employee_lib.dart';
 
 class Moez extends Employee {
   Moez(String name, int age, double salary, String city, String country,
@@ -10,7 +10,6 @@ class Moez extends Employee {
 
   @override
   void employeeDepartement() {
-    // TODO: implement employeeDepartement
     print("$name Departement is HR.");
   }
 }
@@ -24,7 +23,6 @@ class Salah extends Employee {
 
   @override
   void employeeDepartement() {
-    // TODO: implement employeeDepartement
     print("$name Departement is Store.");
   }
 }

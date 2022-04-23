@@ -1,8 +1,8 @@
-import 'package:oop_dart_application/person.dart';
+import 'package:oop_dart_application/person_lib.dart';
 
 void main(List<String> args) {
   collectionList();
-  generic_list();
+  genericList();
   map();
 }
 
@@ -21,17 +21,14 @@ void collectionList() {
   print(list
       .asMap()); // {0: 1, 1: 2, 2: 3, 3: 8.56, 4: 9, 5: true, 6: 10, 7: 45, 8: hello}
 
-  print(list.where((element) => element is int)); //(1, 2, 3, 9, 10, 45)
+  print(list.where((element) => element == 5)); //(1, 2, 3, 9, 10, 45)
 
-  list.forEach((element) {
+  for (var element in list) {
     print(element.runtimeType);
-  });
-
-  var res = (element) => element is int;
-  print(res(5));
+  }
 }
 
-void generic_list() {
+void genericList() {
   var listInteger = <int>[];
   listInteger.add(5);
   listInteger.add(6);
