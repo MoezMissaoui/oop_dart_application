@@ -1,8 +1,11 @@
-import 'package:oop_dart_application/oop_dart_application.dart';
+import 'package:oop_dart_application/Person.dart';
 import 'package:test/test.dart';
 
 void main() {
-  test('calculate', () {
-    expect(calculate(), 42);
+  test('getInitializedName', () {
+    expect(Person.initialize().getName, "Moez");
+  });
+  test('getInitializedAge', () {
+    expect(Person.initialize().getAge, 25);
   });
 }

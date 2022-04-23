@@ -1,43 +1,26 @@
-class Person {
-  late String name;
-  late int age;
-  late double salary;
-  late String city;
-  late String country;
-
-  void eat() {
-    print("$name is eating.");
-  }
-
-  void sleep() {
-    print("$name is sleeping.");
-  }
-
-  void watch() {
-    print("$name is watching.");
-  }
-
-  void showSalary() => print("$name salary's = $salary");
-
-  int getAge() {
-    return age;
-  }
-
-  String getName() => name;
-}
+import 'package:oop_dart_application/Person.dart';
 
 void main(List<String> arguments) {
-  var moez = Person();
-  moez.name = "Moez Missaoui";
-  moez.age = 29;
-  moez.salary = 2200.950;
-  moez.city = "Aouina";
-  moez.country = "Tunis";
-
-  print("${moez.getName()}, ${moez.getAge()} years old.");
+  var moez = Person("Moez Missaoui", 29, 2200.950, "Aouina", "Tunis");
+  print("${moez.getName}, ${moez.getAge} years old.");
   print("From ${moez.city} - ${moez.country} .");
+  print("\n");
+
+  moez.name = "Missaoui Moez";
+  moez.age = 30;
+  moez.salary = 2500;
+  moez.city = "Ain zahouen";
+  moez.country = "Tunis";
+  print("${moez.getName}, ${moez.getAge} years old.");
+  print("From ${moez.city} - ${moez.country} .");
+  print("\n");
+
   moez.showSalary();
   moez.eat();
   moez.sleep();
   moez.watch();
+  print("\n");
+
+  var salah = Person.initialize();
+  print("${salah.getName}, ${salah.getAge} years old.");
 }
