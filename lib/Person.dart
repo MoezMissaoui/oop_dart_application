@@ -12,6 +12,8 @@ class Person {
     age = 25;
   } // Named constaructor
 
+  Person.init(this.name, this.age); // Named constaructor
+
   void eat() {
     print("$name is eating.");
   }
